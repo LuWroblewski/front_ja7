@@ -7,11 +7,15 @@ export const metadata: Metadata = {
   title: 'Painel de Usuarios',
   description: 'Pagina de controle de usuarios do sistema de petições.',
 };
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout(props: { children: React.ReactNode; adicionarUsuario: React.ReactNode }) {
   return (
     <>
       <Menu />
-      {children}
+
+      {props.adicionarUsuario}
+
+      {props.children}
+
       <Session_auth />
       <Footer />
     </>
