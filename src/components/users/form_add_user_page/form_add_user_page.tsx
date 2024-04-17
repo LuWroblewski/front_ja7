@@ -5,9 +5,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { user_schema } from '../../../../validations/user_add_validation';
 
-import 'react-toastify/dist/ReactToastify.css';
+import { create_notify_error, create_notify_sucess } from '../../../../toastify';
+
 import { useRouter } from 'next/navigation';
-import { notifyErrorUser, notifySucessUser } from '@/app/usuarios/@adicionarUsuario/(.)adicionarUsuario/page';
 import user_tag from '../../../../utils/user_tag';
 
 type Inputs = {
@@ -50,16 +50,14 @@ export default function Form_add_user_page() {
 
     if (!response.ok) {
       setIsLoading(false);
-      return notifyErrorUser();
+      return create_notify_error();
     }
 
     if (response.ok) {
       setIsLoading(false);
-      notifySucessUser();
+      create_notify_sucess();
       user_tag();
-      setTimeout(() => {
-        router.push('/usuarios');
-      }, 3000);
+      router.push('/usuarios');
     }
   };
 

@@ -7,9 +7,7 @@ import { signIn } from 'next-auth/react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { auth_schema } from '../../../../validations/auth_validation';
-
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { user_notify_error, user_notify_sucess } from '../../../../toastify';
 
 type Inputs = {
   email: string;
@@ -27,9 +25,6 @@ export default function Form_login() {
     formState: { errors },
   } = useForm<Inputs>({ resolver: yupResolver(auth_schema) });
 
-  const notifySucess = () => toast.success('Login feito com sucesso.');
-  const notifyError = () => toast.error('Autenticação falhou, tente novamente.');
-
   const handleSubmit = async (data: any) => {
     setIsLoading(true);
 
@@ -41,9 +36,9 @@ export default function Form_login() {
 
     if (result?.error) {
       setIsLoading(false);
-      notifyError();
+      user_notify_error();
     } else {
-      notifySucess();
+      user_notify_sucess();
       router.push('/menu');
     }
   };
@@ -71,8 +66,6 @@ export default function Form_login() {
           </button>
         </div>
       </form>
-
-      <ToastContainer position='top-right' autoClose={3000} theme='colored' />
     </>
   );
 }

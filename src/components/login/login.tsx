@@ -1,4 +1,6 @@
 import Form_login from './form_login/form_login';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
   return (
@@ -11,6 +13,7 @@ export default function Login() {
           <Form_login />
         </div>
       </div>
+      <ToastContainer position='top-right' autoClose={3000} theme='colored' />
     </div>
   );
 }

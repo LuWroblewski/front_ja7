@@ -1,6 +1,9 @@
 import Menu_table from './menu_table/menu_table';
 import { IoCheckmarkCircleOutline, IoCloseCircleOutline } from 'react-icons/io5';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 type User = {
   id: number;
   first_name: string;
@@ -73,6 +76,7 @@ export default async function Users() {
           ))}
         </tbody>
       </table>
+      <ToastContainer position='top-right' autoClose={3000} theme='colored' />
     </div>
   );
 }
