@@ -32,7 +32,9 @@ export default function Form_del_user_page() {
   const handleSubmit = async (data: Inputs) => {
     setIsLoading(true);
 
-    const response = await fetch(`http://localhost:3001/users`, {
+    const url_api = process.env.NEXT_PUBLIC_URL_API;
+
+    const response = await fetch(`${url_api}/users`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

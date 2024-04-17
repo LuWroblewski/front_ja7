@@ -1,13 +1,11 @@
 'use client';
 import { useState } from 'react';
-
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-import { user_schema } from '../../../../../validations/user_add_validation';
-
-import { create_notify_error, create_notify_sucess } from '../../../../../toastify';
-
 import { useRouter } from 'next/navigation';
+
+import { user_schema } from '../../../../../validations/user_add_validation';
+import { create_notify_error, create_notify_sucess } from '../../../../../toastify';
 import user_tag from '../../../../../utils/user_tag';
 
 type Inputs = {
@@ -32,7 +30,9 @@ export default function Form_add_user_modal() {
   const handleSubmit = async (data: Inputs) => {
     setIsLoading(true);
 
-    const response = await fetch(`http://localhost:3001/users`, {
+    const url_api = process.env.NEXT_PUBLIC_URL_API;
+
+    const response = await fetch(`${url_api}/users`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
