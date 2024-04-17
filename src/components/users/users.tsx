@@ -51,6 +51,7 @@ export default async function Users() {
             <th>Email</th>
             <th>Cargo</th>
             <th>Status</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -72,6 +73,7 @@ export default async function Users() {
                   </div>
                 )}
               </td>
+              <td>aaaaaaaa</td>
             </tr>
           ))}
         </tbody>
