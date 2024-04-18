@@ -1,3 +1,4 @@
+import Actions from '@/components/users/actions/actions';
 import Users from '@/components/users/users';
 
 export default function Page() {

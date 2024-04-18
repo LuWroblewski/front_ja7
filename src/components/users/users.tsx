@@ -3,6 +3,7 @@ import { IoCheckmarkCircleOutline, IoCloseCircleOutline } from 'react-icons/io5'
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Actions from './actions/actions';
 
 type User = {
   id: number;
@@ -73,7 +74,9 @@ export default async function Users() {
                   </div>
                 )}
               </td>
-              <td>aaaaaaaa</td>
+              <td>
+                <Actions />
+              </td>
             </tr>
           ))}
         </tbody>
