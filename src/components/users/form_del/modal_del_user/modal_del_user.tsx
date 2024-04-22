@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Form_add_user_modal from '../form_add/form_add_user_modal/form_add_user_modal';
+import Form_del_user_modal from './form_del_user_modal/form_del_user_modal';
 
-export default function Modal_add_user() {
+export default function Modal_del_user() {
   const pathName = usePathname();
 
   if (pathName === '/usuarios' || pathName !== '/usuarios/adicionarUsuario') return null;
@@ -17,7 +17,7 @@ export default function Modal_add_user() {
           </form>
         </Link>
 
-        <Form_add_user_modal />
+        <Form_del_user_modal />
       </div>
 
       <form method='dialog' className='modal-backdrop'>

@@ -4,9 +4,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
-import { user_schema } from '../../../../../validations/user_add_validation';
-import { create_notify_error, create_notify_sucess } from '../../../../../toastify';
-import user_tag from '../../../../../utils/user_tag';
+import { user_schema } from '../../../../../../validations/user_add_validation';
+import { create_notify_error, create_notify_sucess } from '../../../../../../toastify';
+import user_tag from '../../../../../../utils/user_tag';
 
 type Inputs = {
   first_name: string;

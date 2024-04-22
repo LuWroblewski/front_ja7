@@ -64,8 +64,9 @@ export default function Form_add_user_page() {
   };
 
   return (
-    <>
-      <form className='space-y-2' action='#' method='POST' onSubmit={onSubmit(handleSubmit)}>
+    <div className='w-screen flex justify-center py-4 '>
+      <form className='space-y-2 ' action='#' method='POST' onSubmit={onSubmit(handleSubmit)}>
+        <h2 className='text-3xl font-bold'> Adicionar Usúario</h2>
         <div className='flex space-x-4'>
           <label className='form-control w-full max-w-xs'>
             <div className='label'>
@@ -147,6 +148,6 @@ export default function Form_add_user_page() {
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 }
