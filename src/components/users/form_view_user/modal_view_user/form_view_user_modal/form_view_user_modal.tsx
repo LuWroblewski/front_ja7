@@ -17,7 +17,7 @@ type Inputs = {
   confirm_password: string;
 };
 
-export default function Form_add_user_modal() {
+export default function Form_view_user_modal() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 

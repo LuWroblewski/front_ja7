@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Form_add_user_modal from './form_add_user_modal/form_add_user_modal';
+import Form_add_user_modal from './form_view_user_modal/form_view_user_modal';
 
-export default function Modal_add_user() {
+export default function Modal_view_user() {
   const pathName = usePathname();
 
   if (pathName === '/usuarios' || pathName !== '/usuarios/adicionarUsuario') return null;

@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Form_update_user_modal from './form_update_user_modal/form_update_user_modal';
 
-export default function Modal_add_user() {
+export default function Modal_update_user() {
   const pathName = usePathname();
 
-  if (pathName === '/usuarios' || pathName !== '/usuarios/adicionarUsuario') return null;
+  if (pathName === '/usuarios' || pathName !== '/usuarios/editarUsuario') return null;
 
   return (
-    <dialog id='my_modal_2' className='modal bg-base-200 w-full bg-opacity-25' open>
+    <dialog id='editarUsuario' className='modal bg-base-200 w-full bg-opacity-25' open>
       <div className='modal-box'>
         <Link href='/usuarios'>
           <form method='dialog'>

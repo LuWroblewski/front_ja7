@@ -1,12 +1,14 @@
 'use client';
 import { useState } from 'react';
+
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-import { useRouter } from 'next/navigation';
+import { user_schema } from '../../../../../validations/user_add_validation';
 
-import { user_schema } from '../../../../../../validations/user_add_validation';
-import { create_notify_error, create_notify_sucess } from '../../../../../../toastify';
-import user_tag from '../../../../../../utils/user_tag';
+import { create_notify_error, create_notify_sucess } from '../../../../../toastify';
+
+import { useRouter } from 'next/navigation';
+import user_tag from '../../../../../utils/user_tag';
 
 type Inputs = {
   first_name: string;
@@ -17,7 +19,7 @@ type Inputs = {
   confirm_password: string;
 };
 
-export default function Form_add_user_modal() {
+export default function Form_view_user_page() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
@@ -62,8 +64,8 @@ export default function Form_add_user_modal() {
   };
 
   return (
-    <>
-      <form className='space-y-2' action='#' method='POST' onSubmit={onSubmit(handleSubmit)}>
+    <div className='w-screen flex justify-center py-4 '>
+      <form className='space-y-2 ' action='#' method='POST' onSubmit={onSubmit(handleSubmit)}>
         <h2 className='text-3xl font-bold'> Adicionar Usúario</h2>
         <div className='flex space-x-4'>
           <label className='form-control w-full max-w-xs'>
@@ -146,6 +148,6 @@ export default function Form_add_user_modal() {
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 }

@@ -21,7 +21,7 @@ export default function Actions() {
         </li>
       </Link>
 
-      <Link href='usuarios/excluirUsuario'>
+      <Link href='usuarios/deletarUsuario'>
         <li className='tooltip tooltip-top text-error' data-tip='Excluir usuário'>
           <p>
             <FiTrash2 />
