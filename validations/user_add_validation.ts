@@ -11,7 +11,7 @@ const user_schema = yup.object().shape({
     .trim()
     .matches(/[!@#$%^&*(),.?":{}|<>]/, 'Senha deve conter caracteres especiais')
     .min(6, 'Senha deve ter pelo menos 6 caracteres')
-    .max(20, 'Senha não deve ter mais que 20 caracteres'),
+    .max(1000, 'Senha não deve ter mais que 50 caracteres'),
   confirm_password: yup
     .string()
     .oneOf([yup.ref('password')], 'As senhas precisam ser iguais')

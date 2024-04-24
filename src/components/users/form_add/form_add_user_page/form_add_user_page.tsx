@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { user_schema } from '../../../../../validations/user_add_validation';
 
-import { create_notify_error, create_notify_sucess } from '../../../../../toastify';
+import { user_crud_notify_error, user_crud_notify_sucess } from '../../../../../toastify';
 
 import { useRouter } from 'next/navigation';
 import user_tag from '../../../../../utils/user_tag';
@@ -52,12 +52,12 @@ export default function Form_add_user_page() {
 
     if (!response.ok) {
       setIsLoading(false);
-      return create_notify_error();
+      return user_crud_notify_error('Criação do usuário falhou, tente novamente.');
     }
 
     if (response.ok) {
       setIsLoading(false);
-      create_notify_sucess();
+      user_crud_notify_sucess('Usuário criado com sucesso.');
       user_tag();
       router.push('/usuarios');
     }

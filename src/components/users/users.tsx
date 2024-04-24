@@ -75,7 +75,7 @@ export default async function Users() {
                 )}
               </td>
               <td>
-                <Actions />
+                <Actions slug={user.id} />
               </td>
             </tr>
           ))}
