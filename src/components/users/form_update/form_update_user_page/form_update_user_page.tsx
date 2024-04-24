@@ -61,7 +61,7 @@ export default function Form_update_user_page({ slug }: Props) {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/users/${slug}`);
+        const response = await fetch(`${url_api}/users/${slug}`);
         if (!response.ok) {
           throw new Error('Erro ao carregar os dados');
         }
@@ -83,7 +83,7 @@ export default function Form_update_user_page({ slug }: Props) {
 
     const url_api = process.env.NEXT_PUBLIC_URL_API;
 
-    const responsedata = await fetch(`http://localhost:3001/users/${slug}`, {
+    const responsedata = await fetch(`${url_api}/users/${slug}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
