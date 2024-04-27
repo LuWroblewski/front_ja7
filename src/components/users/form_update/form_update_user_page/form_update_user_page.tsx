@@ -217,7 +217,7 @@ export default function Form_update_user_page({ slug }: Props) {
         </div>
         <div className='form-control mt-8  flex justify-end items-end w-full'>
           <button className='btn btn-primary w-24 btn-sm'>
-            {isLoading ? <span className='loading loading-spinner loading-xs'></span> : 'Entrar'}
+            {isLoading ? <span className='loading loading-spinner loading-xs'></span> : 'Atualizar'}
           </button>
         </div>
       </form>
