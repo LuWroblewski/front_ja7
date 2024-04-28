@@ -13,7 +13,7 @@ export default function Modal_del_user({ slug }: Props) {
   if (pathName === '/usuarios' || pathName !== `/usuarios/deletarUsuario/${slug}`) return null;
 
   return (
-    <dialog id='deletarUsuario' className='modal bg-base-200 w-full bg-opacity-25' open>
+    <dialog id='deletarUsuario' className='modal  modal-bottom sm:modal-middle  bg-base-200 w-full bg-opacity-25' open>
       <div className='modal-box'>
         <Link href='/usuarios'>
           <form method='dialog'>

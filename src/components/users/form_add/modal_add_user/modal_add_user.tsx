@@ -9,7 +9,11 @@ export default function Modal_add_user() {
   if (pathName === '/usuarios' || pathName !== '/usuarios/adicionarUsuario') return null;
 
   return (
-    <dialog id='adicionarUsuario' className='modal bg-base-200 w-full bg-opacity-25' open>
+    <dialog
+      id='adicionarUsuario'
+      className='modal  modal-bottom sm:modal-middle  bg-base-200 w-full bg-opacity-25'
+      open
+    >
       <div className='modal-box'>
         <Link href='/usuarios'>
           <form method='dialog'>
