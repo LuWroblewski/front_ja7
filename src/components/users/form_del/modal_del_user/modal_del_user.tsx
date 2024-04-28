@@ -3,10 +3,14 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Form_del_user_modal from './form_del_user_modal/form_del_user_modal';
 
-export default function Modal_del_user() {
+interface Props {
+  slug: string;
+}
+
+export default function Modal_del_user({ slug }: Props) {
   const pathName = usePathname();
 
-  if (pathName === '/usuarios' || pathName !== '/usuarios/deletarUsuario') return null;
+  if (pathName === '/usuarios' || pathName !== `/usuarios/deletarUsuario/${slug}`) return null;
 
   return (
     <dialog id='deletarUsuario' className='modal bg-base-200 w-full bg-opacity-25' open>
@@ -17,7 +21,7 @@ export default function Modal_del_user() {
           </form>
         </Link>
 
-        <Form_del_user_modal />
+        <Form_del_user_modal slug={slug} />
       </div>
 
       <form method='dialog' className='modal-backdrop'>
