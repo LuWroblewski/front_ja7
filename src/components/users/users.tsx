@@ -62,7 +62,7 @@ export default async function Users() {
               <td>{user.first_name}</td>
               <td>{user.last_name}</td>
               <td>{user.email}</td>
-              <td>{user.role}</td>
+              <td>{user.role === 'user' ? 'usuário' : 'admin'}</td>
               <td>
                 {user.status ? (
                   <div className='text-success text-lg tooltip ' data-tip='Ativo'>
