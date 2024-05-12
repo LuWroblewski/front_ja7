@@ -1,8 +1,12 @@
+import { cookies } from 'next/headers';
 import Link from 'next/link';
 import { HiMenuAlt2 } from 'react-icons/hi';
 import { IoHomeOutline, IoPeopleOutline } from 'react-icons/io5';
 
 export default function Menu_bar_start() {
+  const cookieStore = cookies();
+  const role = cookieStore.get('role') || '';
+
   return (
     <div className='drawer'>
       <input id='my-drawer' type='checkbox' className='drawer-toggle' />
@@ -24,11 +28,14 @@ export default function Menu_bar_start() {
               <IoPeopleOutline className='text-xl' /> Painel de Petições
             </Link>
           </li>
-          <li>
-            <Link href='/usuarios'>
-              <IoPeopleOutline className='text-xl' /> Painel de Gerenciamento
-            </Link>
-          </li>
+
+          {role && typeof role === 'string' && role === 'admin' && (
+            <li>
+              <Link href='/usuarios'>
+                <IoPeopleOutline className='text-xl' /> Painel de Gerenciamento
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
     </div>
