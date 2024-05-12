@@ -95,7 +95,7 @@ export default function Form_update_user_page({ slug }: Props) {
         role: data.role,
         password: data.password,
         confirm_password: data.confirm_password,
-        status: dataUser?.status || '',
+        status: dataUser?.status,
       }),
     });
 
