@@ -10,8 +10,7 @@ type ICredentials = {
 
 interface User {
   id: string;
-  name: string;
-  email: string;
+  image: string;
 }
 
 const secret_auth = process.env.NEXTAUTH_SECRET;
@@ -48,12 +47,9 @@ const authOptions = {
           console.log(userResult);
 
           const user: User = {
-            id: userResult.token,
-            name: `${userResult.user.first_name} ${userResult.user.last_name} `,
-            email: userResult.user.email,
+            id: userResult.user.id,
+            image: userResult.user,
           };
-
-          console.log(user);
 
           return user;
         } catch (error) {
