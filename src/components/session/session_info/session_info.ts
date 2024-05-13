@@ -12,9 +12,6 @@ export interface SessionUser {
 
 export const session_info = async (session_user: SessionUser | string | null | undefined) => {
   if (typeof session_user !== 'string' && session_user) {
-    console.log(session_user.role);
     cookies().set('role', session_user.role);
-  } else {
-    console.log('Session user not available.');
   }
 };
