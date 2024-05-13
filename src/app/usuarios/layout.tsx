@@ -1,6 +1,7 @@
 import Footer from '@/components/mains/footer/footer';
 import Menu from '@/components/mains/menu/menu';
 import Session_auth from '@/components/session/session_auth/session_auth';
+import Session_auth_admin from '@/components/session/session_auth_admin/session_auth_admin';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -26,6 +27,8 @@ export default function Layout(props: {
       {props.children}
 
       <Session_auth />
+      <Session_auth_admin />
+
       <Footer />
     </>
   );
