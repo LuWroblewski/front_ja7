@@ -10,7 +10,6 @@ export default function Session_auth() {
 
   useEffect(() => {
     session_info(session?.user?.image);
-    console.log(session?.user?.image);
   }, [session?.user?.image]);
 
   useSession({
