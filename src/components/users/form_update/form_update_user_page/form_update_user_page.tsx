@@ -8,7 +8,7 @@ import { user_schema } from '../../../../../validations/user_add_validation';
 import { user_crud_notify_error, user_crud_notify_sucess } from '../../../../../toastify';
 
 import { useRouter } from 'next/navigation';
-import user_tag from '../../../../../utils/user_tag';
+import { user_tag } from '../../../../../utils/tags';
 
 interface Props {
   slug: string;
