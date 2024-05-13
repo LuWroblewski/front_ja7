@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { user_crud_notify_error, user_crud_notify_sucess } from '../../../../../../toastify';
 
 import { useRouter } from 'next/navigation';
-import user_tag from '../../../../../../utils/tags';
+import { user_tag } from '../../../../../../utils/tags';
 
 interface Props {
   slug: string;
