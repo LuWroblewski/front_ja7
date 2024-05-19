@@ -9,7 +9,8 @@ interface Props {
 
 export default function Actions({ slug }: Props) {
   const cookieStore = cookies();
-  const role = cookieStore.get('role')!.value;
+  const roleCookie = cookieStore.get('role');
+  const role = roleCookie ? roleCookie.value : undefined;
 
   return (
     <ul className='menu menu-horizontal bg-none rounded-box text-lg'>
