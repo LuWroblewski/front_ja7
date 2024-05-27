@@ -54,7 +54,7 @@ export default function Form_add_petition_page({ id }: Props) {
         theme: data.theme,
         status: 'aguardando',
         file_id: 1,
-        user_last_update: id,
+        user_last_update: Number(id),
       }),
     });
 

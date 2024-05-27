@@ -8,8 +8,6 @@ export default function Page() {
       <div className='px-4 pt-2'>
         <Petitions />
       </div>
-
-      <ToastContainer position='top-right' autoClose={3000} theme='colored' />
     </div>
   );
 }

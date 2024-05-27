@@ -25,7 +25,7 @@ export default function Modal_del_petition({ slug }: Props) {
       </div>
 
       <form method='dialog' className='modal-backdrop'>
-        <Link href='/usuarios'>
+        <Link href='/peticoes'>
           <button>close</button>
         </Link>
       </form>

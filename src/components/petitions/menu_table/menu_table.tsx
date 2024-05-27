@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import { IoPersonAddOutline } from 'react-icons/io5';
+import { TiDocumentAdd } from 'react-icons/ti';
 
 export default function Menu_table() {
   return (
     <ul className='menu menu-horizontal rounded-box'>
       <Link href='peticoes/adicionarPeticao'>
         <button className='btn btn-outline btn-sm m'>
-          <IoPersonAddOutline />
+          <TiDocumentAdd className='text-xl' />
           Adicionar Petição
         </button>
       </Link>

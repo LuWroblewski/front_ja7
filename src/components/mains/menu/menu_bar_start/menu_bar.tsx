@@ -6,7 +6,7 @@ import { IoHomeOutline, IoPeopleOutline } from 'react-icons/io5';
 export default function Menu_bar_start() {
   const cookieStore = cookies();
   const roleCookie = cookieStore.get('role');
-  const role = roleCookie ? roleCookie.value : undefined;
+  const role = roleCookie ? roleCookie.value : '';
 
   return (
     <div className='drawer'>

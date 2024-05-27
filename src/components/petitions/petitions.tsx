@@ -72,11 +72,14 @@ export default async function Petitions() {
                   <div className='badge badge-info '>{petitions.status}</div>
                 </td>
               )}
-              {(petitions.status === 'excluida' ||
-                petitions.status === 'cancelada' ||
-                petitions.status === 'recusada') && (
+              {(petitions.status === 'excluida' || petitions.status === 'recusada') && (
                 <td>
                   <div className='badge badge-error '>{petitions.status}</div>
+                </td>
+              )}
+              {petitions.status === 'cancelada' && (
+                <td>
+                  <div className='badge badge-warning '>{petitions.status}</div>
                 </td>
               )}
               {petitions.status === 'concluida' && (

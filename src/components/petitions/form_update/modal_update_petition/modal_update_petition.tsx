@@ -10,7 +10,7 @@ interface Props {
 export default function Modal_update_petition({ slug }: Props) {
   const pathName = usePathname();
 
-  if (pathName === '/peticoes' || pathName !== `/peticoes/editaPeticao/${slug}`) return null;
+  if (pathName === '/peticoes' || pathName !== `/peticoes/editraPeticao/${slug}`) return null;
 
   return (
     <dialog id='editarPeticao' className='modal  modal-bottom sm:modal-middle  bg-base-200 w-full bg-opacity-25' open>

@@ -1,3 +1,4 @@
+import Exit_login from '@/components/login/exit_login/exit_login';
 import Link from 'next/link';
 import { IoBuildOutline, IoPersonOutline } from 'react-icons/io5';
 
@@ -24,6 +25,8 @@ export default function Menu_bar_end() {
             <IoBuildOutline className='text-xl' /> Suporte
           </Link>
         </li>
+
+        <Exit_login />
       </ul>
     </div>
   );

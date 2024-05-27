@@ -1,6 +1,9 @@
 import Menu_bar_end from './menu_bar_end/menu_bar_end';
 import Menu_bar_start from './menu_bar_start/menu_bar';
 import Notification from './notification/notification';
+import Image from 'next/image';
+import dark_logo from '../../../../images/dark_logo.png';
+import light_logo from '../../../../images/light_logo.png';
 
 export default function Menu() {
   return (
@@ -10,7 +13,16 @@ export default function Menu() {
       </div>
 
       <div className='navbar-center'>
-        <a className='btn btn-ghost text-xl'>Maxon Oil</a>
+        <div className='avatar dark:hidden w-full h-10  items-center '>
+          <div className='w-48 rounded'>
+            <Image src={light_logo} alt='Light logo' layout='fill' objectFit='contain' />
+          </div>
+        </div>
+        <div className='avatar hidden dark:block w-full h-10 items-center'>
+          <div className='w-48 rounded'>
+            <Image src={dark_logo} alt='Dark logo' layout='fill' objectFit='contain' />
+          </div>
+        </div>
       </div>
       <div className='navbar-end'>
         <Notification />

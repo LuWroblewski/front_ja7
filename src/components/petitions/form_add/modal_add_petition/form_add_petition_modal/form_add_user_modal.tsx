@@ -54,7 +54,7 @@ export default function Form_add_petition_modal({ id }: Props) {
         theme: data.theme,
         status: 'aguardando',
         file_id: 1,
-        user_last_update: id,
+        user_last_update: Number(id),
       }),
     });
 
@@ -66,7 +66,7 @@ export default function Form_add_petition_modal({ id }: Props) {
     if (response.ok) {
       setIsLoading(false);
       user_crud_notify_sucess('Petição criada com sucesso.');
-      petition_tag();
+      await petition_tag();
       router.push('/peticoes');
     }
   };
