@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Accept_button from './buttons/accept_button';
+import Reject_button from './buttons/reject_button';
 
 interface Props {
   slug: string;
@@ -108,8 +110,8 @@ export default function Form_view_petition_modal({ slug }: Props) {
             </div>
           </div>
           <div className='flex justify-end mt-2 space-x-4'>
-            <button className='btn  btn-outline btn-error'>Rejeitar</button>
-            <button className='btn  btn-outline btn-success'>Aceitar</button>
+            <Reject_button />
+            <Accept_button />
           </div>
         </div>
       )}
